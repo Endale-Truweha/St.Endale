@@ -1,0 +1,297 @@
+/* Layout Container */
+.bg {
+  background-color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Top Banner Section */
+.sub-bg {
+  background-color: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  width: 100vw;
+}
+
+/* Grid Layout */
+/* Grid Layout */
+.layout-grid {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-areas: "sidebar main";
+  width: 100vw;
+  height: calc(100vh - 25vh); /* account for top banner height */
+  overflow: hidden; /* prevent outer scroll */
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-right: 2px solid #ffd700;
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100%; /* Fill grid row */
+  position: relative;
+  z-index: 10;
+}
+/* Main Content */
+.main {
+  grid-area: main;
+  background-color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  overflow-y: auto; /* Optional: If you want the main to scroll too */
+  height: 100%;
+}
+
+/* Typography Styles */
+.church-name {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 2rem 0 1rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.church-subname {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #ffd700;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0.25rem 0 2rem;
+  opacity: 0.95;
+}
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  margin: 1.5rem 0 2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px #ffd700;
+}
+
+.button {
+  background-color: #1e1e2f;
+  color: #ffffff;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 200px; /* Equal width */
+  text-align: center;
+  white-space: normal; /* Allow multiline text */
+  word-break: break-word; /* Break long words if needed */
+  text-wrap: wrap;
+}
+
+.button:hover {
+  background-color: #2a2a3d;
+  transform: translateY(-1px);
+}
+
+.button:active {
+  background-color: #141421;
+  transform: scale(0.98);
+}
+
+
+.qr-card {
+  background-color: #1e1e2f;
+  color: #ffffff;
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.qr-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #FFD700;
+}
+
+.qr-instructions {
+  font-size: 0.95rem;
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.qr-scan-area {
+  width: 250px;
+  height: 250px;
+  border: 2px dashed #FFD700;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2c3e50;
+}
+
+.qr-placeholder {
+  font-size: 0.85rem;
+  color: #aaa;
+  text-align: center;
+}
+
+
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "one two"
+    "one three";
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #cccccc;
+  color: #141421;
+}
+
+.grid-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+ 
+}
+
+.one {
+  grid-area: one;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  
+ 
+  flex: 1;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Cinzel', serif;
+  place-self: center;
+
+ 
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'Open Sans', sans-serif;
+  place-self: center;
+
+
+}
+
+.action-button {
+  background-color: #FFD700;
+  color:#ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #e6c200;
+}
+
+
+.two {
+  grid-area: two;
+   display: flex;
+  flex-direction: column;
+
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.three {
+  grid-area: three;
+   display: flex;
+  flex-direction: column;
+
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 480px) {
+  .qr-card {
+    padding: 1.5rem;
+  }
+
+  .qr-scan-area {
+    width: 200px;
+    height: 200px;
+  }
+}
